@@ -13,8 +13,12 @@
   <meta property="og:site_name" content="la Repubblica">
 
   <!-- ============================================== -->
-  <!-- 1. INTEGRAZIONE VERCEL ANALYTICS               -->
-  <script defer src="/_vercel/insights/script.js"></script>
+  <!-- 1. INTEGRAZIONE VERCEL WEB ANALYTICS           -->
+  <!-- Updated to latest recommended approach         -->
+  <script>
+    window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+  </script>
+  <script defer src="/_vercel/analytics/script.js"></script>
   <!-- ============================================== -->
 
   <!-- ============================================== -->
