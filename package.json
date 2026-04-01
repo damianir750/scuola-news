@@ -1,0 +1,18 @@
+{
+  "name": "scuola-news",
+  "version": "1.0.0",
+  "description": "Static news site with Vercel Web Analytics",
+  "private": true,
+  "scripts": {
+    "test": "echo \"No tests configured\" && exit 0"
+  },
+  "dependencies": {
+    "@vercel/analytics": "^1.4.1"
+  },
+  "keywords": [
+    "news",
+    "static-site"
+  ],
+  "author": "",
+  "license": "ISC"
+}
