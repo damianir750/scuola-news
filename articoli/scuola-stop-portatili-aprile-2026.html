@@ -3,70 +3,374 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>la Repubblica - Scuola</title>
+  <title>Stop ai portatili in classe: da aprile vietati in tutte le scuole italiane - la Repubblica</title>
+  
+  <meta name="description" content="Svolta improvvisa nel sistema scolastico italiano: a partire dai prossimi giorni, i portatili non saranno più ammessi nelle classi di tutta Italia.">
+  <meta name="author" content="Redazione Scuola">
+  <meta property="og:title" content="Stop ai portatili in classe: da aprile vietati in tutte le scuole italiane">
+  <meta property="og:description" content="Svolta improvvisa nel sistema scolastico italiano: i portatili non saranno più ammessi nelle classi.">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="la Repubblica">
+
+  <!-- ============================================== -->
+  <!-- 1. INTEGRAZIONE VERCEL ANALYTICS               -->
+  <script defer src="/_vercel/insights/script.js"></script>
+  <!-- ============================================== -->
+
+  <!-- ============================================== -->
+  <!-- 2. SETUP PUBBLICITA' (SCRIPT PRINCIPALE)       -->
+  <!-- Inserisci qui il tuo ID client AdSense reale     -->
+  <!-- <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXX" crossorigin="anonymous"></script> -->
+  <!-- ============================================== -->
+
   <style>
-    body { font-family: Georgia, 'Times New Roman', serif; background: #ffffff; color: #111; margin: 0; }
-    .header { text-align: center; padding: 20px 0 10px; border-bottom: 1px solid #ddd; }
-    .logo { font-size: 42px; font-weight: bold; letter-spacing: -1px; }
-    .logo span { color: #c40000; }
-    .nav { display: flex; justify-content: center; gap: 20px; font-size: 14px; padding: 10px 0; border-bottom: 1px solid #eee; color: #333; }
-    .nav span { cursor: pointer; }
-    .container { max-width: 700px; margin: 30px auto; padding: 0 15px; }
-    .section { color: #c40000; font-size: 13px; font-weight: bold; margin-bottom: 5px; }
-    h1 { font-size: 34px; line-height: 1.2; margin: 10px 0 15px; }
-    .meta { font-size: 13px; color: #666; margin-bottom: 20px; }
-    .image { width: 100%; height: 350px; background: url('Scrivania di classe con laptop e appunti.png') center/cover; border-radius: 4px; margin-bottom: 10px; }
-    .caption { font-size: 12px; color: #666; margin-bottom: 20px; }
-    p { font-size: 18px; line-height: 1.7; margin: 16px 0; }
-    strong { font-weight: bold; }
-    footer { text-align: center; font-size: 12px; color: #888; margin: 50px 0 20px; }
+    /* RESET & FONTS */
+    :root {
+      --rep-red: #cc0000;
+      --text-main: #222222;
+      --text-light: #555555;
+      --bg-gray: #f5f5f5;
+      --border-color: #e2e2e2;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { 
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif; 
+      background: #fff; 
+      color: var(--text-main); 
+      line-height: 1.6;
+    }
+    
+    /* ADVERTISEMENT PLACEHOLDERS */
+    .ad-slot-wrapper {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background: var(--bg-gray);
+      padding: 15px 0;
+      border-bottom: 1px solid var(--border-color);
+    }
+    .ad-label {
+      font-size: 10px;
+      color: #777;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 5px;
+    }
+    .ad-slot {
+      background: #e9e9e9;
+      width: 100%;
+      max-width: 970px;
+      height: 90px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #999;
+      font-size: 12px;
+      border: 1px dashed #ccc;
+    }
+    .ad-slot.in-article {
+      max-width: 300px;
+      height: 250px;
+      margin: 20px auto;
+      float: right;
+      margin-left: 20px;
+    }
+    @media (max-width: 768px) {
+      .ad-slot.in-article { float: none; margin: 20px auto; width: 300px; display: block; }
+    }
+
+    /* HEADER TOP BAR */
+    .top-bar {
+      background: #000;
+      color: #fff;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 5px 20px;
+      font-size: 13px;
+    }
+    .top-bar-left, .top-bar-right { display: flex; align-items: center; gap: 15px; }
+    .subscribe-btn { background: #fee227; color: #000; padding: 5px 15px; font-weight: bold; border-radius: 4px; text-decoration: none; font-size: 12px; }
+
+    /* MAIN HEADER */
+    header {
+      border-bottom: 1px solid var(--border-color);
+      padding: 15px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+    }
+    .burger-menu, .search-icon { position: absolute; top: 25px; cursor: pointer; }
+    .burger-menu { left: 20px; }
+    .search-icon { right: 20px; }
+    .logo { font-family: Georgia, 'Times New Roman', Times, serif; font-size: 48px; font-weight: bold; letter-spacing: -1.5px; text-decoration: none; color: #000;}
+    .logo span { color: var(--rep-red); }
+
+    /* NAVIGATION */
+    nav {
+      border-bottom: 1px solid var(--border-color);
+      padding: 10px 0;
+      text-align: center;
+      overflow-x: auto;
+      white-space: nowrap;
+    }
+    nav a { text-decoration: none; color: #333; font-size: 14px; font-weight: 600; text-transform: uppercase; margin: 0 12px; }
+    nav a:hover { color: var(--rep-red); }
+
+    /* MAIN CONTAINER */
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 20px;
+      display: flex;
+      gap: 40px;
+    }
+    .article-content { flex: 1; min-width: 0; }
+    .sidebar { width: 300px; display: none; }
+    @media (min-width: 1024px) {
+      .sidebar { display: block; }
+    }
+
+    /* ARTICLE HEADER */
+    .breadcrumb { font-size: 13px; text-transform: uppercase; color: var(--rep-red); font-weight: 700; margin-bottom: 15px; }
+    .breadcrumb a { color: var(--rep-red); text-decoration: none; }
+    h1 { font-family: Georgia, 'Times New Roman', serif; font-size: 42px; line-height: 1.1; margin-bottom: 15px; font-weight: 700; letter-spacing: -0.5px; }
+    h2.subtitle { font-family: Georgia, 'Times New Roman', serif; font-size: 22px; line-height: 1.4; color: #444; font-weight: 400; margin-bottom: 25px; }
+
+    /* META & AUTHOR INFO */
+    .meta-wrapper {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-top: 1px solid var(--border-color);
+      border-bottom: 1px solid var(--border-color);
+      padding: 15px 0;
+      margin-bottom: 25px;
+    }
+    .author-info { display: flex; align-items: center; gap: 10px; }
+    .author-avatar { width: 40px; height: 40px; background: #ddd; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; color: #777;}
+    .author-details { font-size: 14px; }
+    .author-name { font-weight: 700; color: #000; }
+    .publish-date { color: var(--text-light); font-size: 13px; }
+    
+    .social-share { display: flex; gap: 10px; }
+    .social-btn { width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #fff; cursor: pointer; text-decoration: none; }
+    .sb-fb { background: #3b5998; }
+    .sb-tw { background: #000000; }
+    .sb-wa { background: #25D366; }
+
+    /* IMAGE */
+    .main-image { width: 100%; border-radius: 2px; margin-bottom: 5px; }
+    .image-caption { font-size: 13px; color: #777; margin-bottom: 30px; text-align: right; border-bottom: 1px solid var(--border-color); padding-bottom: 10px;}
+
+    /* TYPOGRAPHY IN ARTICLE */
+    .article-body p { font-family: Georgia, 'Times New Roman', serif; font-size: 20px; line-height: 1.65; margin-bottom: 25px; color: #222; }
+    .article-body p:first-of-type::first-letter { font-size: 54px; font-weight: bold; float: left; margin: 5px 8px 0 0; line-height: 1; color: var(--rep-red); }
+    .article-body strong { font-weight: 700; }
+
+    /* RELATED ARTICLES (FAKE) */
+    .related-articles { margin-top: 40px; border-top: 2px solid #000; padding-top: 20px; }
+    .related-title { font-size: 18px; text-transform: uppercase; font-weight: bold; margin-bottom: 15px; }
+    .related-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+    @media (max-width: 600px) { .related-grid { grid-template-columns: 1fr; } }
+    .related-card h3 { font-size: 16px; margin: 10px 0; font-family: Georgia, serif; line-height: 1.3;}
+    .related-card img { width: 100%; height: 120px; object-fit: cover; background: #ddd; }
+
+    /* SIDEBAR AD & WIDGETS */
+    .sidebar-widget { margin-bottom: 30px; }
+    .widget-title { font-size: 16px; font-weight: 700; text-transform: uppercase; border-bottom: 2px solid #000; padding-bottom: 5px; margin-bottom: 15px; }
+    .news-list { list-style: none; }
+    .news-list li { border-bottom: 1px solid #eee; padding: 12px 0; font-size: 15px; font-family: Georgia, serif; line-height: 1.3; }
+    .news-list li a { text-decoration: none; color: #000; }
+    .news-list li a:hover { color: var(--rep-red); }
+
+    /* FOOTER */
+    footer { background: #222; color: #ccc; padding: 40px 20px; text-align: center; margin-top: 50px; font-size: 12px; }
+    .footer-links { display: flex; justify-content: center; flex-wrap: wrap; gap: 15px; margin-bottom: 20px; }
+    .footer-links a { color: #fff; text-decoration: none; text-transform: uppercase; font-weight: bold; }
+    .footer-copy { max-width: 600px; margin: 0 auto; color: #888; }
+
+    /* COOKIE BANNER */
+    .cookie-banner { position: fixed; bottom: 0; left: 0; right: 0; background: #fdfdfd; border-top: 1px solid #ccc; box-shadow: 0 -4px 10px rgba(0,0,0,0.1); padding: 20px; z-index: 9999; display: flex; flex-direction: column; align-items: center; gap: 15px; text-align: center; }
+    .cookie-text { font-size: 13px; max-width: 800px; }
+    .cookie-text a { color: var(--rep-red); text-decoration: underline; }
+    .cookie-buttons { display: flex; gap: 10px; flex-wrap: wrap; justify-content: center; }
+    .btn { padding: 10px 20px; border: none; font-weight: bold; cursor: pointer; border-radius: 4px; font-size: 13px; }
+    .btn-accept { background: var(--rep-red); color: white; }
+    .btn-manage { background: #eee; color: #333; }
+    .cookie-banner.hidden { display: none; }
   </style>
 </head>
 <body>
 
-<div class="header">
-  <div class="logo">la <span>Repubblica</span></div>
-</div>
+  <!-- BANNER COOKIE -->
+  <div id="cookie-banner" class="cookie-banner">
+    <div class="cookie-text">
+      <strong>Informativa sui Cookie.</strong> Noi e i nostri partner terzi utilizziamo cookie e tecnologie simili per raccogliere dati sul tuo utilizzo del nostro sito per proporti pubblicità personalizzata basata sulle tue preferenze, oltre che per fini statistici. Cliccando su "Accetto", acconsenti all'uso dei cookie. Puoi gestire le tue preferenze cliccando su "Gestisci". Leggi la nostra <a href="#">Cookie Policy</a>.
+    </div>
+    <div class="cookie-buttons">
+      <button class="btn btn-manage" onclick="document.getElementById('cookie-banner').classList.add('hidden')">Gestisci Preferenze</button>
+      <button class="btn btn-accept" onclick="document.getElementById('cookie-banner').classList.add('hidden')">Accetto</button>
+    </div>
+  </div>
 
-<div class="nav">
-  <span>Home</span>
-  <span>Politica</span>
-  <span>Scuola</span>
-  <span>Tecnologia</span>
-  <span>Economia</span>
-</div>
+  <!-- PUBBLICITA' HEADER -->
+  <div class="ad-slot-wrapper">
+    <div class="ad-label">- Pubblicità -</div>
+    <!-- SLOT AD SENSE: Sostituisci questo div con il tag <ins> fornito da Google AdSense -->
+    <div class="ad-slot" data-ad-client="ca-pub-XXXXXXXXX" data-ad-slot="12345678">
+      <span>Spazio Banner 970x90</span>
+    </div>
+  </div>
 
-<div class="container">
-  <div class="section">SCUOLA</div>
+  <!-- TOP BAR -->
+  <div class="top-bar">
+    <div class="top-bar-left">
+      <span>Edizione locale</span>
+      <span>|</span>
+      <span>Meteo</span>
+    </div>
+    <div class="top-bar-right">
+      <a href="#" class="subscribe-btn">ABBONATI a 1€</a>
+      <span>Accedi / Registrati</span>
+    </div>
+  </div>
 
-  <h1>Stop ai portatili in classe: da aprile vietati in tutte le scuole italiane</h1>
+  <!-- HEADER RICERCA -->
+  <header>
+    <svg class="burger-menu" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+    <a href="#" class="logo">la <span>Repubblica</span></a>
+    <svg class="search-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+  </header>
 
-  <div class="meta">di Redazione • 1 Aprile 2026</div>
+  <!-- NAVIGAZIONE -->
+  <nav>
+    <a href="#">Cronaca</a>
+    <a href="#">Politica</a>
+    <a href="#">Economia</a>
+    <a href="#">Sport</a>
+    <a href="#">Spettacoli</a>
+    <a href="#">Motori</a>
+    <a href="#">Salute</a>
+    <a href="#" style="color:var(--rep-red)">Scuola</a>
+  </nav>
 
-  <div class="image"></div>
+  <!-- CONTENUTO PRINCIPALE -->
+  <div class="container">
+    <main class="article-content">
 
-  <p><strong>ROMA</strong> — Svolta improvvisa nel sistema scolastico italiano: a partire dai prossimi giorni, i portatili non saranno più ammessi nelle classi di tutta Italia.</p>
+      <div class="breadcrumb"><a href="#">Scuola &amp; Università</a></div>
 
-  <p>Il provvedimento nasce da una valutazione sul reale utilizzo dei dispositivi personali durante le lezioni, ritenuto sempre più difficile da monitorare in modo efficace.</p>
+      <h1>Stop ai portatili in classe: da aprile vietati in tutte le scuole italiane</h1>
+      <h2 class="subtitle">Il Ministero sospende provvisoriamente l'uso di laptop per gli studenti: "Impossibile distinguere lo studio dall'intrattenimento durante l'orario didattico. Più del 58% le usa per giocare".</h2>
 
-  <p>Diversi report indicano un uso frequente per attività non didattiche — tra cui intrattenimento, videogiochi online e navigazione non correlata — con effetti sulla continuità delle lezioni e sull’attenzione in aula.</p>
+      <div class="meta-wrapper">
+        <div class="author-info">
+          <div class="author-avatar">R</div>
+          <div class="author-details">
+            <div class="author-name">di Redazione</div>
+            <div class="publish-date">01 Aprile 2026 | Tempo di lettura: 2 min</div>
+          </div>
+        </div>
+        <div class="social-share">
+          <a class="social-btn sb-fb" href="#" title="Condividi su Facebook">f</a>
+          <a class="social-btn sb-tw" href="#" title="Condividi su X">X</a>
+          <a class="social-btn sb-wa" href="#" title="Condividi su WhatsApp">W</a>
+        </div>
+      </div>
 
-  <p>Secondo una sintesi delle rilevazioni su un campione di istituti secondari, <strong>oltre il 58% delle sessioni di utilizzo</strong> presenterebbe elementi non direttamente legati all’attività didattica, mentre circa il <strong>34% degli studenti</strong> ammetterebbe un uso personale “occasionale ma ricorrente”.</p>
+      <img src="Scrivania di classe con laptop e appunti.png" alt="Laptop su un banco scolastico" class="main-image" />
+      <div class="image-caption">Banchi di scuola con materiale didattico - (Foto Repertorio)</div>
 
-  <p>«Non si tratta di casi isolati, ma di un comportamento ormai normalizzato», si legge in una delle relazioni. «La difficoltà principale è la zona grigia tra uso didattico e uso personale, che rende il controllo poco efficace».</p>
+      <div class="article-body">
 
-  <p>Il nodo, spiegano fonti vicine al Ministero, è strutturale: in molti casi non è più possibile distinguere con certezza tra le due modalità d’uso durante l’orario scolastico. Alcuni istituti segnalano inoltre limiti operativi nell’introdurre sistemi di controllo senza incidere sulla privacy degli studenti.</p>
+        <!-- PUBBLICITA' IN-ARTICLE -->
+        <div class="ad-slot in-article">
+           <span>Banner 300x250<br>(Pubblicità In-Text)</span>
+        </div>
 
-  <p>Da qui la decisione di una misura preventiva: sospendere temporaneamente l’uso dei portatili personali in classe, in attesa di nuovi protocolli su utilizzo, verifica e responsabilità digitale.</p>
+        <p><strong>ROMA</strong> — Svolta improvvisa nel sistema scolastico italiano: a partire dai prossimi giorni, i computer portatili non saranno più ammessi nelle classi di tutta Italia. Una decisione che sta già facendo molto discutere genitori, studenti e analisti del settore educativo.</p>
 
-  <p>Il divieto entrerà in vigore già da aprile, con eccezioni limitate per attività specifiche autorizzate.</p>
+        <p>Il provvedimento nasce da una lunga valutazione condotta durante il primo quadrimestre sul reale utilizzo dei dispositivi personali durante le lezioni, ritenuto dai docenti sempre più difficile da monitorare in modo efficace.</p>
 
-  <p><strong>Le reazioni sono contrastanti:</strong> c’è chi parla di ritorno al passato e chi vede nella decisione una correzione necessaria.</p>
+        <p>Diversi report ministeriali indicano infatti un uso frequente per attività non didattiche — tra cui intrattenimento puro, videogiochi online, shopping e navigazione sui social network non correlata ai temi trattati. Un fenomeno che inciderebbe gravemente sulla continuità delle lezioni, causando un forte calo dell'attenzione in aula.</p>
 
-  <p><strong>Una cosa è certa:</strong> la scuola italiana si prepara a cambiare, ancora una volta, volto.</p>
-</div>
+        <p>Secondo una sintesi delle rilevazioni effettuate su un campione di oltre trecento istituti secondari distribuiti su tutto il territorio, <strong>oltre il 58% delle sessioni di utilizzo</strong> a schermo acceso presenterebbe elementi non direttamente legati all'attività del docente.</p> 
 
+        <p>Inoltre, tramite un questionario anonimo, circa il <strong>34% degli studenti</strong> avrebbe ammesso candidamente un uso personale che definiscono "occasionale ma ricorrente" anche durante materie fondamentali.</p>
 
+        <p>«Non si tratta di casi isolati da affrontare a livello di singolo consiglio di classe, ma di un comportamento di massa ormai normalizzato dal post-pandemia a oggi», si legge in una delle relazioni allegate alla circolare. «La difficoltà principale per i docenti risiede in quella vasta zona grigia tra l'uso legittimamente didattico e il passatempo personale. Questo rende ogni tipo di controllo manuale poco efficace o addirittura fonte di continuo attrito disciplinare».</p>
+
+        <p>Il nodo, spiegano fonti vicine al Ministero dell'Istruzione, è prettamente strutturale: al giorno d'oggi, con il multitasking estremo dei sistemi operativi, per un insegnante che fa lezione dal cattedra non è più possibile distinguere con certezza tra le due modalità d’uso. Allo stesso tempo, vari istituti hanno segnalato forti limiti legali e operativi nell’introdurre sistemi di controllo o di monitoraggio della rete in tempo reale senza violare drasticamente la privacy degli studenti.</p>
+
+        <p>Da qui la decisione drastica in forma di misura preventiva: sospendere temporaneamente, ma in modo categorico, l’uso dei portatili e dei tablet personali in classe su tutto il territorio. Si resterà in attesa di nuovi protocolli sperimentali, attualmente allo studio di una commissione tecnologica, su utilizzo sicuro, verifica e cittadinanza digitale.</p>
+
+        <p>Il divieto nazionale entrerà ufficialmente in vigore già a partire dal mese di aprile. Saranno previste, come precisato nel testo del decreto, solamente eccezioni limitate per gli studenti con disturbi specifici dell'apprendimento (DSA) e per rarissime attività pratiche laboratoriali, che però dovranno essere preventivamente e formalmente autorizzate dal dirigente scolastico.</p>
+
+        <p><strong>Le reazioni sono contrastanti:</strong> sui forum dei genitori c’è chi parla di oscurantismo e di assurdo ritorno al passato — specialmente considerando gli enormi investimenti per la digitalizzazione delle aule negli scorsi anni — e chi, specialmente tra il corpo docenti, vede invece nella decisione una correzione tardiva ma assolutamente faticosa e necessaria.</p>
+
+        <p><strong>Una cosa comunque è certa:</strong> a ridosso degli scrutini finali, la scuola italiana si prepara a cambiare, ancora una volta, volto e abitudini.</p>
+
+      </div>
+
+      <!-- FINTI ARTICOLI CORRELATI -->
+      <section class="related-articles">
+        <h2 class="related-title">Ti potrebbe interessare anche</h2>
+        <div class="related-grid">
+          <article class="related-card">
+            <div style="background:#ddd; height:120px; display:flex; align-items:center; justify-content:center; color:#999;font-size:12px;">Immagine di repertorio</div>
+            <h3><a href="#" style="text-decoration:none; color:#000;">I presidi chiedono regole più severe per l'uso dei cellulari a ricreazione</a></h3>
+          </article>
+          <article class="related-card">
+            <div style="background:#ddd; height:120px; display:flex; align-items:center; justify-content:center; color:#999;font-size:12px;">Immagine di repertorio</div>
+            <h3><a href="#" style="text-decoration:none; color:#000;">Nuovo bonus per l'acquisto di libri cartacei: come richiederlo nel 2026</a></h3>
+          </article>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+      
+      <!-- PUBBLICITA' SIDEBAR -->
+      <div class="ad-slot-wrapper" style="background:transparent; padding-top:0; border:none; margin-bottom: 30px;">
+        <div class="ad-label">- Pubblicità -</div>
+        <div class="ad-slot" style="max-width:300px; height:600px; margin:0;" data-ad-client="ca-pub-XXXXXXXXX" data-ad-slot="98765432">
+          <span>Banner 300x600<br>(Half Page Ad)</span>
+        </div>
+      </div>
+
+      <div class="sidebar-widget">
+        <h3 class="widget-title">I più letti in Scuola</h3>
+        <ul class="news-list">
+          <li><a href="#">Caos graduatorie docenti: scadenze prorogate di una settimana</a></li>
+          <li><a href="#">Maturità 2026, svelate le materie per la seconda prova</a></li>
+          <li><a href="#">Il crollo delle iscrizioni ai licei classici: i dati aggiornati</a></li>
+          <li><a href="#">Viaggi d'istruzione, costi raddoppiati rispetto al 2023</a></li>
+        </ul>
+      </div>
+
+    </aside>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-links">
+      <a href="#">Il Quotidiano In Edicola</a>
+      <a href="#">Chi Siamo</a>
+      <a href="#">Contatti</a>
+      <a href="#">Scrivi Alla Redazione</a>
+      <a href="#">Privacy Policy</a>
+      <a href="#">Cookie Policy</a>
+    </div>
+    <div class="footer-copy">
+      Divisione Stampa Nazionale — GEDI Gruppo Editoriale S.p.A. - P.Iva 00906801006 <br>
+      Tutti i diritti riservati.
+    </div>
+  </footer>
 
 </body>
 </html>
